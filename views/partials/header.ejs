@@ -1,0 +1,32 @@
+<header>
+
+    <div class="logo">
+        <a href="/"><img src="/assets/images/logo.png" alt="logo" height="125"></a>
+    </div>
+    <!--TODO: login becomes My Connections and sign up becomes sign out if user session exists-->
+    <div class="usernav">
+        <a href="/connections/newConnection" class="vertical-line">Create Connection</a>
+
+        <% if (typeof theUser !== "undefined") { %>
+            <a href="/user/myConnections" class="vertical-line">My Connections</a>
+            <a href="/user/logout" class="vertical-line">Log Out</a>
+        <% } else { %>
+            <a href="/user/login" class="vertical-line">Log In</a>
+            <a href="#" class="vertical-line">Sign Up</a>
+        <% } %>
+    </div>
+
+    <div class="navbar">
+        <a href="/">Home</a>
+        <a href="/connections/">Connections</a>
+    </div>
+
+    <div class="username">
+
+        <% if(typeof theUser !== "undefined") { %>
+            <p>Welcome, <%= theUser.firstName %> <%= theUser.lastName %>!</p>
+        <% } %>
+        
+    </div>
+    
+</header>

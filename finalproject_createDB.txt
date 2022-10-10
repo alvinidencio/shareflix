@@ -1,0 +1,35 @@
+//delete
+use shareflixDB
+db.dropDatabase()
+
+//create
+use shareflixDB
+db.createCollection(connections)
+db.createColletion(users)
+db.createCollection(userprofiles)
+
+//connection database
+db.connections.insert({connectionID: 1, connectionName: "Inception", topic: "Movie", host: "Rowell Alvin Idencio", date: "March 27, 2021", startTime: "9:00 pm", endTime: "11:15 pm", location: "Online", detail: "Available on Netflix"})
+
+db.connections.insert({connectionID: 2, connectionName: "Godzilla vs. Kong", topic: "Movie", host: "Vergil", date: "March 31, 2021", startTime: "7:00 pm", endTime: "9:00 pm", location: "Cinema 134, 678 Realfake street", detail: "Let's get motivated."})
+
+db.connections.insert({connectionID: 3, connectionName: "Shrek", topic: "Movie", host: "L. Sebastian", date: "April 2, 2021", startTime: "5:00 pm", endTime: "6:45 pm", location: "Online", detail: "Shrek is love, Shrek is life."})
+
+db.connections.insert({connectionID: 4, connectionName: "The Melancholy of Haruhi Suzumiya, Season 3", topic: "TV Series", host: "Mr. Bones", date: "January 1, 2091", startTime: "12:00 am", endTime: "12:59 pm", location: "Afterlife", detail: "Patience is a virtue."})
+
+db.connections.insert({connectionID: 5, connectionName: "The Falcon and the Winter Soldier, Episode 2", topic: "TV Series", host: "Doug", date: "March 26, 2021", startTime: "7:00 pm", endTime: "8:00 pm", location: "Online", detail: "Available on Disney+"})
+
+db.connections.insert({connectionID: 6, connectionName: "Uma Musume Pretty Derby, Season 1 marathon", topic: "TV Series", host: "G. Chad", date: "April 2, 2021", startTime: "1:00 pm", endTime: "8:00 pm", location: "123 Fake street", detail: "Come on over, dinner and drinks are on me."})
+
+
+//sample user
+db.users.insert({userID: 1, firstName: "Rowell Alvin", lastName: "Idencio", email: "alvin@email.com"})
+//userprofile for userID 1 with an empty array of userConnections [IMPORTANT]
+db.userprofiles.insert({userID: 1, userConnections: []})
+
+
+//sample userprofile, ignore
+//db.userprofiles.insert({userID: 1, userConnections: [{connectionID: 2, rsvp: "Yes"}, {connectionID: 4, rsvp: "No"}]})
+
+
+

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>RollPlay</title>
+        <link rel="stylesheet" href="/assets/stylesheets/styles.css">
+    </head>
+
+    <body>
+
+        <%- include("partials/header.ejs") %>
+
+        <div class="content">
+
+            <h3>Create New Connection</h3>
+            <form id="connection-form" method="POST" action="/user/myConnections/new">
+
+                <p></p>
+                <label for="topic">Topic</label>
+                <input type="text" name="topic">
+    
+                <p></p>
+                <label for="name">Title</label>
+                <input type="text" name="name">
+    
+                <p></p>
+                <label for="details">Details</label>
+                <textarea name="details" cols=50 rows=5></textarea>
+    
+                <p></p>
+                <label for="location">Where</label>
+                <input type="text" name="location">
+
+                <p></p>
+                <label for="date">When</label>
+                <input type="date" name="date">
+
+                <p></p>
+                <label for="startTime">Start</label>
+                <input type="time" name="startTime">
+
+                <p></p>
+                <label for="endTime">End</label>
+                <input type="time" name="endTime">
+
+                <p></p>
+                <input type="submit" value="Create Connection"/>
+
+            </form>
+        </div>
+
+        <%- include("partials/footer.ejs") %>
+
+    </body>
+</html>

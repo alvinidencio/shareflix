@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>Connection</title>
+        <link rel="stylesheet" href="/assets/stylesheets/styles.css">
+    </head>
+
+    <body>
+
+        <%- include("partials/header.ejs") %>
+
+        <div class="content">
+            
+
+            <h1><%= connection.connectionName %></h1>
+
+            <img src="/assets/images/host<%= connection.connectionID %>.jpg" alt="host" height="300"> 
+            
+
+            <h2><%= connection.host %></h2>
+            <p><%= connection.date %></p>
+            <p><%= connection.startTime %> - <%= connection.endTime %></p>
+            <p><%= connection.location %></p>
+
+
+            <h3>Details</h3>
+            <p><%= connection.detail %></p>
+            
+            
+            
+            <div>
+            <h3>Register for this Session?</h3>
+                <form method="POST">
+                    <input hidden name="connectionID" value="<%= connection.connectionID %>">
+                    <button type="submit" formaction="/user/myConnections" class="yesbtn" name="rsvp" value="Yes">Yes</button>
+                    <button type="submit" formaction="/user/myConnections" class="nobtn" name="rsvp" value="No">No</button>
+                    <button type="submit" formaction="/user/myConnections" class="maybebtn" name="rsvp" value="Maybe">Maybe</button>
+                </form>
+            </div>
+        </div>
+
+        <%- include("partials/footer.ejs") %>
+
+    </body>
+</html>

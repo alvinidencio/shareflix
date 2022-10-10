@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>Connections</title>
+        <link rel="stylesheet" href="/assets/stylesheets/styles.css">
+    </head>
+
+    <body>
+
+        <%- include("partials/header.ejs") %>
+
+        <div class="content">
+            
+            <!--how to do this more efficiently?-->
+
+            <% topicList.forEach(topic => { %>
+                <h1><%= topic %></h1>
+                <% connections.forEach(connection => { %>
+                    <ul>
+                    <% if(connection.topic == topic) { %>
+                        <li><a href="/connections/connection/<%= connection.connectionID %>"><%= connection.connectionName %></a></li>
+                    <% } %>
+                    </ul>
+                <% }); %>
+            <% }); %>
+
+        </div>
+
+        <%- include("partials/footer.ejs") %>
+
+    </body>
+</html>

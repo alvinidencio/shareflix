@@ -1,0 +1,138 @@
+body {
+    background-color: #282a2e;
+    color: #c5c8c6;
+    font-family: 'Arial', sans-serif;
+    font-weight: 400;
+  }
+
+  body a {
+    color: whitesmoke;
+  }
+      
+  header {
+    font-family: "Verdana", sans-serif;
+      background-color: #1d1f21;
+  }
+  
+  footer {
+      background-color: #1d1f21;
+  }
+  
+  .usernav {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .usernav a {
+      float: right;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  .usernav a:hover {
+    color: grey;
+  }
+  
+  .navbar {
+    display: flex;
+  }
+  
+  .navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  .navbar a:hover {
+    background-color: #282a2e;
+  }
+  
+  
+  .copyright {
+      padding: 10px;
+  }
+  
+  .botnav {
+      display: flex;
+    justify-content: flex-end;
+  }
+  .botnav a {
+      float: right;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  
+  }
+  
+  .logo {
+      padding: 10px;
+  }
+  
+  .content {
+      padding: 50px 25px 500px;
+  }
+  
+  
+  .connection a {
+      color: #f2f2f2;
+  }
+  
+  table, th, td {
+      border: 1px solid black;
+  }
+  
+  th, td {
+      padding: 15px;
+  }
+  
+  .updatebtn, .deletebtn {
+      margin: 5px;
+  }
+  
+  .updatebtn, .yesbtn {
+      background-color: #3498db;
+  }
+  
+  .deletebtn, .nobtn {
+      background-color: #e74c3c;
+  }
+  
+  .maybebtn {
+      background-color: #2ecc71;
+  }
+      
+  .vertical-line {
+    padding: 30px;
+    width: 250px;
+    float: left;
+    border: 1.5px solid;
+    border-right: 0;
+    border-top: 0;
+    border-bottom: 0;
+    border-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(226, 226, 226, 1) 48%, rgba(255, 255, 255, 0) 100%);
+    border-image-slice: 1;
+  }
+  
+  table {
+    /*width: 100%;*/
+    display: flex;
+    justify-content: center; 
+  }
+  
+  tr:nth-child(even) {
+    background-color: #1d1f21;
+  }
+
+  .username {
+    padding-left: 15px;
+    padding-bottom: 10px;
+    color: #f2f2f2;
+  }

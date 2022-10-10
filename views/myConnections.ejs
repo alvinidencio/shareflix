@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>My Connections</title>
+        <link rel="stylesheet" href="/assets/stylesheets/styles.css">
+    </head>
+
+    <body>
+
+        <%- include("partials/header.ejs") %>
+
+        <div class="content">
+            
+            <p>Your Connections</p>
+            
+            <% if (userConnections.length !== 0) { %>
+
+            <form>
+                <div class="table">
+                    <table>
+
+                        <tr>
+                            <th>Connection</th>
+                            <th>Category</th>
+                            <th>Attending?</th>
+                            <th>Actions</th>
+                        </tr>
+                        
+                        <% for (var i=0; i < userConnections.length; i++) { %>
+                        <tr>
+                            <td><%= userConnections[i].connection.connectionName %></td>
+                            <td><%= userConnections[i].connection.topic %></td>
+                            <td><%= userConnections[i].rsvp %></td>
+                            <td>
+                            <button type="submit" formaction="/connections/connection/<%= userConnections[i].connection.connectionID %>" class="updatebtn">Update</button>
+                            <button type="submit" formmethod="POST" formaction="/user/myConnections/delete" class="deletebtn" name="delete" value="<%= userConnections[i].connection.connectionID %>">Delete</button>
+                            </td>
+                        </tr>
+                        <% } %>
+                    </table>
+                </div>
+            </form>
+            <% } else { %>
+            <p>You do not have any connections saved! Check the available connections in the catalog or host your own connections.</p>
+            <% } %>
+        </div>
+
+        <%- include("partials/footer.ejs") %>
+
+    </body>
+</html>
